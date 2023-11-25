@@ -42,7 +42,7 @@ app.get("/api/comments", async (req, res) => {
 // Add a new comment
 app.post("/api/comments", async (req, res) => {
   const { user, desc } = req.body;
-
+  
   try {
     const newComment = new Comment({ desc, user });
     const savedComment = await newComment.save();
