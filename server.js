@@ -46,7 +46,7 @@ app.post("/api/comments", async (req, res) => {
   const { user, desc } = req.body;
 
   try {
-    const newComment = new Comment({ user, desc });
+    const newComment = new Comment({ desc, user });
     const savedComment = await newComment.save();
     res.json(savedComment);
   } catch (error) {
