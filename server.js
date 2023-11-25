@@ -1,5 +1,4 @@
-require('dotenv').config();
-
+require("dotenv").config();
 
 // Import necessary packages
 const express = require("express");
@@ -16,7 +15,6 @@ app.use(cors()); // Enables Cross-Origin Resource Sharing
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGODB_URI);
-
 
 // Define the data structure (schema)
 const commentSchema = new mongoose.Schema({
